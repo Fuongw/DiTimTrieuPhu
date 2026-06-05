@@ -1,0 +1,19 @@
+AiLaTrieuPhu/
+│
+├── .gitignore
+├── README.md
+├── CMakeLists.txt (hoặc AiLaTrieuPhu.pro nếu dùng QMake)
+│
+├── data/
+│   └── questions.txt (Dùng để lưu ngân hàng câu hỏi)
+│
+├── include/ (Chứa các file header .h)
+│   ├── Question.h       (Model: Định nghĩa cấu trúc câu hỏi)
+│   ├── GameController.h (Controller: Xử lý logic đúng/sai, tính tiền)
+│   └── MainWindow.h     (View: Định nghĩa giao diện Qt - sẽ làm ở bước 2)
+│
+└── src/ (Chứa các file mã nguồn .cpp)
+    ├── GameController.cpp
+    ├── MainWindow.cpp
+    └── main.cpp
+    
