@@ -9,44 +9,49 @@ using namespace std;
 
 class GameController {
 private:
-    vector<Question> allQuestions; // Chứa toàn bộ ngân hàng câu hỏi (có thể vài chục câu)
-    vector<Question> currentSet;   // Chỉ chứa đúng 10 câu đã được random cho lượt chơi hiện tại
+    string playerName;             // Tên người đang chơi
+    vector<Question> allQuestions; // Chứa toàn bộ ngân hàng câu hỏi
+    vector<Question> currentSet;   // Chỉ chứa đúng 15 câu đã được random cho lượt chơi hiện tại
     
-    int currentIndex; // Đang ở câu hỏi số mấy (0 đến 9)
-    int currentMoney;
+    int currentIndex;              // Đang ở câu hỏi số mấy (0 đến 14)
+    long currentMoney;             // Dùng kiểu long để chứa được số tiền lớn
     
-    // Thang tiền thưởng 10 mốc (Ví dụ: 200k, 400k, 600k...)
-    int moneyLadder[10] = {200, 400, 600, 1000, 2000, 3000, 6000, 10000, 14000, 22000}; 
+    // Thang tiền thưởng 15 mốc
+    long moneyLadder[15] = {1000000, 2000000, 3000000, 4000000, 5000000, 6000000, 8000000, 10000000, 14000000, 22000000, 30000000, 60000000, 120000000, 250000000, 500000000}; 
 
     // Các biến trạng thái quản lý quyền trợ giúp (Chỉ được xài 1 lần)
     bool has5050;
     bool hasSwapQuestion;
+    bool hasCallFriend;            // MỚI: Biến quản lý quyền gọi người thân
 
 public:
     GameController();
 
     // 1. Khởi tạo dữ liệu
     void loadQuestionsFromFile(string filename); 
-    void startNewGame(); // Hàm này sẽ trộn (shuffle) allQuestions và bốc 10 câu đưa vào currentSet
-
+    void startNewGame();           // Trộn allQuestions và bốc 15 câu đưa vào currentSet
+    
+    void setPlayerName(string name);
+    string getPlayerName();        // Trả về tên người chơi để in ra lúc kết thúc
+    
     // 2. Tương tác với lượt chơi
     Question getCurrentQuestion();
-    bool checkAnswer(int playerChoiceIndex); // Đổi thành int (0,1,2,3)
-    int getCurrentMoney();
-    int getPrizeMoney(); // MỚI: Lấy tiền chốt mang về khi kết thúc
+    bool checkAnswer(int playerChoiceIndex); 
+    
+    long getCurrentMoney();        // Trả về kiểu long
+    long getPrizeMoney();          // Trả về kiểu long
     bool isGameOver();
-    bool isGameWon();    // MỚI: Kiểm tra xem có qua hết 10 câu không
+    bool isGameWon();              // Kiểm tra xem có qua hết 15 câu không
 
     // 3. Xử lý quyền trợ giúp
-    // Khi gọi hàm này, ẩn đi 2 đáp án sai, và set has5050 = false
     vector<string> use5050(); 
-    
-    // Bốc 1 câu hỏi khác từ allQuestions (nhưng không nằm trong 10 câu hiện tại) để thay thế
     void useSwapQuestion(); 
+    string useCallFriend();        // Hàm thực thi gọi người thân (Trả về câu thoại gợi ý đáp án)
 
-    // Kiểm tra xem quyền trợ giúp còn không để hiển thị/ẩn nút bấm trên giao diện
+    // Kiểm tra xem quyền trợ giúp còn không để hiển thị/ẩn nút bấm trên UI
     bool canUse5050();
     bool canUseSwapQuestion();
+    bool canUseCallFriend();       // MỚI: Kiểm tra trạng thái nút gọi người thân
 };
 
 #endif
