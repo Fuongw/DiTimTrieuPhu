@@ -1,11 +1,11 @@
 DiTimTrieuPhu_UI/
 │
 ├── .gitignore
-├── README.md
-├── CMakeLists.txt (hoặc AiLaTrieuPhu.pro nếu dùng QMake)
+├── DiTimTrieuPhu_UI.pro (dùng QMake)
 │
 ├── data/
-│   └── questions.txt (Dùng để lưu ngân hàng câu hỏi)
+│   └── questions_easy.txt (Dùng để lưu ngân hàng câu hỏi dễ)
+|   └── questions_hard.txt (Dùng để lưu ngân hàng câu hỏi khó)
 │
 ├── include/ (Chứa các file header .h)
 │   ├── Question.h       (Model: Định nghĩa cấu trúc câu hỏi)
