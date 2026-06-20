@@ -1,0 +1,209 @@
+Ai là người đầu tiên khởi xướng và phát triển nhân (kernel) Linux vào năm 1991?
+Bill Gates
+Linus Torvalds
+Richard Stallman
+Steve Jobs
+1
+
+Lệnh nào sau đây được sử dụng để hiển thị thư mục hiện hành trong giao diện dòng lệnh Linux?
+ls
+cd
+pwd
+mkdir
+2
+
+Trong hệ điều hành Linux, tài khoản nào có quyền hạn cao nhất, có thể can thiệp toàn bộ hệ thống?
+Administrator
+Guest
+User
+Root
+3
+
+Thư mục nào trong cấu trúc cây thư mục Linux mặc định chứa các file cấu hình của hệ thống?
+/bin
+/etc
+/home
+/var
+1
+
+Đâu là giấy phép mã nguồn mở phổ biến nhất được áp dụng cho nhân Linux?
+MIT License
+Apache License
+GNU GPL
+Microsoft PL
+2
+
+Thành phần nào của hệ điều hành chịu trách nhiệm quản lý tài nguyên phần cứng và giao tiếp giữa phần cứng với phần mềm?
+Shell
+Kernel
+GUI
+Desktop Environment
+1
+
+Lệnh nào được sử dụng để tạo một thư mục mới trong Linux?
+rmdir
+touch
+mkdir
+New-Folder
+2
+
+Trong Linux, lệnh nào được sử dụng để liệt kê các file và thư mục con bên trong thư mục hiện tại?
+dir
+ls
+list
+show
+1
+
+Tiện ích nào sau đây đóng vai trò là trình thông dịch dòng lệnh (Shell) mặc định trên hầu hết các bản phân phối Linux hiện nay?
+cmd
+PowerShell
+Bash
+Zsh
+2
+
+Hệ điều hành mã nguồn mở có đặc điểm cốt lõi nào sau đây?
+Người dùng phải mua bản quyền bản thương mại mới được dùng
+Mã nguồn được công khai và mọi người có quyền sửa đổi, phân phối
+Chỉ chạy được trên các máy tính cấu hình cao
+Không bao giờ bị nhiễm mã độc hoặc virus
+1
+
+Lệnh nào dùng để thay đổi thư mục làm việc hiện tại sang một thư mục khác?
+move
+goto
+cd
+chdir
+2
+
+Để xem nội dung của một file văn bản ngắn ngay trên màn hình Terminal, bạn sử dụng lệnh nào?
+cat
+nano
+vi
+echo
+0
+
+Trong các hệ điều hành sau, hệ điều hành nào KHÔNG phải là mã nguồn mở?
+Ubuntu
+Fedora
+Windows 11
+Red Hat Enterprise Linux
+2
+
+Phần mở rộng (Extension) phổ biến của các gói cài đặt phần mềm trên hệ điều hành Ubuntu/Debian là gì?
+.exe
+.apk
+.deb
+.rpm
+2
+
+Để cập nhật danh sách các gói phần mềm từ kho lưu trữ (Repository) trên Ubuntu, bạn dùng lệnh nào?
+sudo apt upgrade
+sudo apt update
+sudo apt install
+sudo apt remove
+1
+
+Khi một file có quyền hạn là -rwxrwxrwx, điều này có nghĩa là gì?
+Chỉ có user sở hữu mới có đầy đủ quyền
+Mọi người dùng trên hệ thống đều có quyền Đọc, Ghi và Thực thi
+File này không ai có quyền xóa
+File này đã bị lỗi hệ thống
+1
+
+Lệnh nào sau đây được sử dụng để xóa một file trong Linux?
+del
+remove
+rm
+erase
+2
+
+Thư mục /home trong Linux thường được dùng để làm gì?
+Chứa các chương trình thực thi của hệ thống
+Chứa các file cấu hình chung
+Chứa thư mục cá nhân và dữ liệu của các người dùng thường
+Chứa các file tạm thời của hệ thống
+2
+
+Để xem danh sách các tiến trình (process) đang chạy trong hệ thống theo thời gian thực, lệnh nào thường được dùng?
+ps
+top
+taskmgr
+kill
+1
+
+Công cụ nào sau đây là một trình soạn thảo văn bản trực tiếp trên giao diện dòng lệnh của Linux?
+Notepad
+WordPad
+nano
+Gedit
+2
+
+Trình quản lý gói phần mềm mặc định trên các hệ điều hành như Red Hat, CentOS hoặc Fedora hiện tại là gì?
+apt
+pacman
+dnf
+brew
+2
+
+Lệnh clear trên Terminal có tác dụng gì?
+Xóa toàn bộ các file trong thư mục hiện tại
+Xóa sạch màn hình dòng lệnh hiện tại để dễ nhìn
+Tắt cửa sổ Terminal ngay lập tức
+Khởi động lại hệ điều hành
+1
+
+Biểu tượng linh vật chính thức của hệ điều hành Linux là con vật nào?
+Con báo
+Con chim đại bàng
+Con chim cánh cụt
+Con chuột túi
+2
+
+Lệnh whoami trong Linux hiển thị thông tin gì?
+Tên của máy tính trong mạng nội bộ
+Tên đăng nhập của người dùng hiện tại
+Danh sách tất cả người dùng đang online
+Địa chỉ IP của máy tính
+1
+
+Đảng Cộng sản Việt Nam được thành lập vào ngày, tháng, năm nào?
+03/02/1930
+19/05/1941
+02/09/1945
+30/04/1975
+0
+
+Hội nghị hợp nhất các tổ chức cộng sản để thành lập Đảng Cộng sản Việt Nam đầu năm 1930 diễn ra tại đâu?
+Quảng Châu (Trung Quốc)
+Cửu Long (Hương Cảng, Trung Quốc)
+Cao Bằng (Việt Nam)
+Ma Cao (Trung Quốc)
+1
+
+Ai là người chủ trì Hội nghị thành lập Đảng Cộng sản Việt Nam đầu năm 1930?
+Trần Phú
+Nguyễn Ái Quốc
+Lê Hồng Phong
+Hà Huy Tập
+1
+
+Cương lĩnh chính trị đầu tiên của Đảng (tháng 2/1930) do ai soạn thảo?
+Trần Phú
+Nguyễn Ái Quốc
+Hồ Tùng Mậu
+Lê Hồng Phong
+1
+
+Tên gọi đầu tiên của Đảng Cộng sản Việt Nam khi mới thành lập vào tháng 2 năm 1930 là gì?
+Đảng Cộng sản Đông Dương
+An Nam Cộng sản đảng
+Đảng Cộng sản Việt Nam
+chó
+2
+
+Ai là Tổng Bí thư đầu tiên của Đảng Cộng sản Việt Nam?
+Nguyễn Ái Quốc
+Trần Phú
+Lê Hồng Phong
+Nguyễn Văn Cừ
+1
