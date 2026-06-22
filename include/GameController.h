@@ -31,7 +31,11 @@ private:
     bool hasSwapQuestion;
     bool hasCallFriend;
 
+    // Biến để lưu các đáp án bị ẩn (cho 50/50) - true = bị ẩn, false = vẫn hiển thị
+    vector<bool> hiddenAnswers;
+
 public:
+    void setCurrentIndex(int index);
     GameController();
 
     // 1. Khởi tạo dữ liệu (Đã sửa lại thành 2 hàm cho khớp cấu trúc Dễ/Khó)
@@ -53,14 +57,17 @@ public:
     bool isGameWon();
 
     // 3. Xử lý quyền trợ giúp
-    vector<string> use5050();
-    void useSwapQuestion();
-    string useCallFriend();
+    vector<int> use5050();      // Trả về danh sách index (0,1,2,3) của các đáp án bị ẩn
+    void useSwapQuestion(int index);
+    string useCallFriend(string friendName = "");  // Nhận tên người gọi, nếu không nhập mặc định rỗng
 
     // Kiểm tra trạng thái quyền trợ giúp
     bool canUse5050();
     bool canUseSwapQuestion();
     bool canUseCallFriend();
+
+    // Kiểm tra xem đáp án có bị ẩn không (cho 50/50)
+    bool isAnswerHidden(int answerIndex);
 };
 
 #endif

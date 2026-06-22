@@ -1,6 +1,5 @@
 # This file is used to ignore files which are generated
-# ----------------------------------------------------------------------------
-
+# -------------------------------------------------------------------------
 *~
 *.autosave
 *.a
@@ -80,3 +79,17 @@ CMakeLists.txt.user*
 .rcc/
 .uic/
 /build*/
+# --- CAU HINH RIENG CHO DU AN DI TIM TRIEU PHU ---
+moc_*.cpp
+moc_*.h
+ui_*.h
+Makefile
+.qmake.stash
+
+# Bo qua file chay game
+DiTimTrieuPhu_UI
+
+# Bo qua file sao luu va file tam cua Shell Script
+backups/
+data/*.tmp
+data/current_15Qs.txt

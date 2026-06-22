@@ -1,0 +1,6 @@
+phuongg,1.000
+phuonggg,0
+phuong,400
+phuongG,2.000
+phuongG,200
+Phuong,10.000

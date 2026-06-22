@@ -15,10 +15,12 @@ class MainWindow : public QMainWindow {
     Q_OBJECT // Bắt buộc phải có macro này để dùng cơ chế Signals & Slots (Click nút bấm)
 
 public:
+    void setPlayerName(QString name);
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
+
     void showLoginScreen();
     void on_btn_Start_clicked(); // (Nếu nút Start bên UI không có gạch dưới thì giữ nguyên)
 
@@ -35,6 +37,7 @@ private slots:
     void on_btn_PlayAgain_clicked();
 
 private:
+    QString currentPlayerName;
     Ui::MainWindow *ui;           // Con trỏ ui: Dùng để gọi các nút bấm đã thiết kế (VD: ui->btnStart)
     GameController controller;    // Lõi logic game đã chốt với bạn cùng nhóm
     QTimer *introTimer;           // Bộ đồng hồ đếm ngược 10s cho màn hình Intro
