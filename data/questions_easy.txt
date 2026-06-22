@@ -53,8 +53,8 @@ Bash
 Zsh
 2
 Hệ điều hành mã nguồn mở có đặc điểm cốt lõi nào sau đây?
-Người dùng phải mua bản quyền bản thương mại mới được dùng
-Mã nguồn được công khai và mọi người có quyền sửa đổi, phân phối
+User phải mua bản quyền bản thương mại mới được dùng
+Mã nguồn:công khai,mọi người có quyền sửa đổi,phân phối
 Chỉ chạy được trên các máy tính cấu hình cao
 Không bao giờ bị nhiễm mã độc hoặc virus
 1
