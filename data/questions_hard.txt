@@ -4,12 +4,6 @@ kill -9 4567
 kill -1 4567
 killall 4567
 1
-Khi thực hiện lệnh chmod 754 file.txt, quyền hạn của các nhóm đối tượng sẽ thay đổi như thế nào?
-User đầy đủ quyền; Group quyền Đọc/Chạy; Other quyền Đọc
-User quyền Đọc/Ghi; Group quyền Đọc/Chạy; Other quyền Ghi
-User quyền Đọc/Chạy; Group quyền Ghi/Chạy; Other quyền Đọc
-Toàn bộ các nhóm đều có quyền Đọc và Chạy
-0
 Bạn muốn tìm kiếm chuỗi "error" không phân biệt chữ hoa thường trong tất cả các file thuộc thư mục /var/log. Lệnh nào đúng?
 find /var/log -name "error"
 grep -r -i "error" /var/log/
@@ -18,33 +12,15 @@ locate "error" /var/log
 1
 Trong quản lý bộ nhớ Linux, hiện tượng "Thrashing" xảy ra khi nào?
 Khi RAM còn quá nhiều và bộ nhớ Swap không được sử dụng
-Khi hệ thống dành phần lớn thời gian để hoán vị trang dữ liệu giữa RAM và Swap
 Khi tiến trình bị hủy đột ngột do tràn bộ nhớ (OOM)
 Khi CPU bị quá tải do chạy quá nhiều tiến trình tính toán thuần túy
-1
+Khi hệ thống dành phần lớn time để hoán vị trang dữ liệu giữa RAM và Swap
+3
 Để kiểm tra chi tiết log vận hành của một dịch vụ hệ thống được quản lý bởi systemd, ta nên dùng lệnh nào?
 cat /var/log/syslog
 journalctl -u tên_dịch_vụ
 dmesg
 systemctl status
-1
-Ký tự tạo đường ống dẫn (Pipe |) trong Linux dùng để kết nối hai lệnh có cơ chế hoạt động như thế nào?
-Lấy dữ liệu đầu vào của lệnh thứ nhất làm tham số cho lệnh thứ hai
-Chuyển hướng đầu ra tiêu chuẩn (stdout) của lệnh thứ nhất thành đầu vào tiêu chuẩn (stdin) của lệnh thứ hai
-Chuyển hướng đầu ra lỗi (stderr) của lệnh thứ nhất thành đầu vào của lệnh thứ hai
-Chạy song song cả hai lệnh trên hai nhân CPU khác nhau
-1
-Khi cấu hình phân vùng Swap trên Linux, mục đích chính của phân vùng này là gì?
-Làm bộ nhớ đệm tăng tốc độ đọc ghi cho ổ cứng SSD
-Mở rộng bộ nhớ ảo bằng cách dùng một phần ổ cứng khi RAM vật lý bị đầy
-Lưu trữ các file sao lưu dự phòng của hệ thống khi crash
-Chứa các file thực thi của nhân Linux trong quá trình boot
-1
-Sự khác biệt cốt lõi giữa hai tiến trình (Process) và luồng (Thread) trong kiến trúc hệ điều hành Linux là gì?
-Các tiến trình dùng chung không gian bộ nhớ, các luồng độc lập bộ nhớ
-Các tiến trình độc lập không gian bộ nhớ, các luồng trong cùng tiến trình dùng chung bộ nhớ
-Tiến trình luôn được cấp phát CPU trước luồng
-Luồng có thể tồn tại độc lập mà không cần tiến trình cha
 1
 Lệnh nào dùng để theo dõi liên tục các dòng log mới được ghi thêm vào cuối file /var/log/auth.log theo thời gian thực?
 head -n 20 /var/log/auth.log
@@ -52,18 +28,6 @@ cat /var/log/auth.log
 tail -f /var/log/auth.log
 less /var/log/auth.log
 2
-Trong Linux, inode (index node) là một cấu trúc dữ liệu dùng để lưu trữ thông tin gì của file?
-Tên file và toàn bộ nội dung dữ liệu bên trong file
-Các siêu dữ liệu (metadata) như kích thước, quyền hạn, chủ sở hữu và con trỏ block dữ liệu
-Đường dẫn tuyệt đối dẫn đến vị trí lưu trữ file trên đĩa cứng
-Lịch sử các lần chỉnh sửa và xóa của file đó
-1
-Lệnh umask 022 có tác dụng gì khi người dùng tạo mới một file văn bản thông thường?
-Đặt quyền mặc định cho file mới tạo là 755
-Đặt quyền mặc định cho file mới tạo là 644 (loại bỏ quyền ghi của group và other)
-Ngăn chặn hoàn toàn người dùng khác đọc file mới tạo
-Chỉ cho phép tài khoản root chỉnh sửa file này
-1
 Khi một tiến trình con (child process) kết thúc nhưng tiến trình cha không gọi hàm wait(), tiến trình con đó sẽ trở thành?
 Orphan process (Tiến trình mồ côi)
 Zombie process (Tiến trình thây ma)
@@ -87,30 +51,6 @@ graphical.target
 multi-user.target
 rescue.target
 poweroff.target
-1
-Khi sử dụng lệnh ln file1.txt file2.txt (Hard link), điều gì sẽ xảy ra nếu bạn xóa file1.txt?
-file2.txt cũng bị xóa theo lập tức
-file2.txt vẫn tồn tại và giữ nguyên nội dung dữ liệu của file1.txt
-file2.txt trở thành một liên kết gãy và không thể mở được
-Hệ thống báo lỗi và không cho phép xóa file1.txt
-1
-File cấu hình /etc/fstab trong hệ điều hành Linux được sử dụng để làm gì?
-Cấu hình danh sách các tài khoản người dùng được phép đăng nhập
-Tự động gắn (mount) các phân vùng ổ đĩa và hệ thống file khi khởi động hệ thống
-Lưu trữ danh sách các DNS server được hệ thống sử dụng
-Cấu hình các tham số bảo mật cho tường lửa iptables
-1
-Khi thực hiện lệnh redirect dạng command >> file.txt, ký tự >> có ý nghĩa gì?
-Ghi đè hoàn toàn nội dung cũ của file bằng đầu ra của lệnh
-Ghi thêm (append) đầu ra của lệnh vào cuối nội dung hiện tại của file
-Chuyển nội dung file thành đầu vào cho lệnh
-Xóa file cũ và tạo file mới có cùng tên để ghi dữ liệu
-1
-Cơ chế "Copy-on-Write" (CoW) khi gọi hệ thống lệnh fork() trong Linux mang lại lợi ích gì?
-Tự động sao lưu dữ liệu sang ổ đĩa khác đề phòng mất điện
-Tiết kiệm tài nguyên RAM bằng cách cho cha và con dùng chung bộ nhớ cho đến khi một trong hai sửa đổi dữ liệu
-Tăng tốc độ mã hóa dữ liệu của tiến trình con
-Ngăn chặn tiến trình con can thiệp vào tiến trình cha
 1
 Biến cục bộ trong một script Bash được khai báo bằng từ khóa nào để phạm vi của nó không bị ảnh hưởng ra bên ngoài hàm?
 global
@@ -153,12 +93,6 @@ Comment thông thường, không có tác dụng thực tế
 Shebang, chỉ định trình thông dịch sẽ chạy script này
 Lệnh xóa bộ nhớ đệm trước khi thực thi
 Khai báo bản quyền mã nguồn mở của script
-1
-Lệnh sed 's/apple/orange/g' input.txt thực hiện công việc nào sau đây?
-Xóa tất cả các từ apple trong file input.txt
-Thay thế tất cả các từ apple bằng orange trong file input.txt và in ra màn hình
-Tìm kiếm xem trong file có từ apple hay không
-Đổi tên file input.txt thành orange.txt
 1
 Để cấu hình các tham số mạng tĩnh hoặc DHCP trên các phiên bản Ubuntu Server đời mới, người ta sử dụng công cụ nào?
 /etc/network/interfaces
@@ -217,13 +151,13 @@ Thay đổi mật khẩu của tài khoản hiện tại
 Khi bạn chạy một lệnh và thêm ký tự & ở cuối (ví dụ: ./myscript.sh &), lệnh này sẽ được xử lý như thế nào?
 Lệnh sẽ chạy với quyền root
 Lệnh sẽ bị hủy bỏ ngay khi người dùng tắt Terminal
-Lệnh sẽ được chạy ngầm dưới nền (background), trả lại quyền điều khiển Terminal cho người dùng
 Lệnh sẽ được chuyển hướng đầu ra vào một file tạm
-2
+Lệnh sẽ được chạy ngầm(background),trả lại quyền control Terminal cho user
+3
 Lệnh iptables hoặc ufw trên các hệ điều hành Linux được sử dụng để quản lý thành phần nào?
-Quản lý bộ nhớ RAM và bộ nhớ cache
-Quản lý tường lửa (Firewall) để lọc và kiểm soát lưu lượng mạng
-Quản lý các tài khoản người dùng từ xa
+Quản lý bộ nhớ RAM, bộ nhớ cache
+Quản lý tường lửa để lọc,kiểm soát lưu lượng mạng
+Quản lý các account user từ xa
 Quản lý các thiết bị lưu trữ ngoại vi
 1
 Trong trình soạn thảo vi hoặc vim, phím nào được sử dụng để chuyển từ chế độ Lệnh (Command mode) sang chế độ Chèn dữ liệu (Insert mode)?
@@ -246,7 +180,7 @@ locate
 1
 Khi sử dụng lệnh ssh -i key.pem user@remote_ip, tham số -i có ý nghĩa gì?
 Chỉ định số cổng kết nối SSH (Port)
-Chỉ định file chứa khóa riêng tư (Private Key) để xác thực thay cho mật khẩu
+Chỉ định file chứa khóa riêng tư(Private Key)để xác thực thay cho mật khẩu
 Chỉ định giao thức SSH phiên bản 1
 Yêu cầu hệ thống nén dữ liệu khi truyền tải
 1
@@ -286,12 +220,6 @@ ping
 netstat (hoặc ss)
 traceroute
 2
-Trong Linux, file /etc/passwd lưu trữ thông tin gì của hệ thống?
-Mật khẩu đã được mã hóa của tất cả người dùng
-Thông tin cơ bản về các tài khoản người dùng (username, UID, thư mục home, shell)
-Danh sách các mật khẩu cũ của root
-Danh sách các IP được phép truy cập hệ thống
-1
 Để kết thúc một phiên làm việc (logout) khỏi Terminal mà không làm tắt máy, bạn dùng lệnh nào?
 shutdown
 exit
@@ -310,30 +238,12 @@ Trong mạng Linux, file nào cấu hình địa chỉ IP của các DNS Nameser
 /etc/networks
 /etc/hostname
 1
-Lệnh alias ll='ls -la' có tác dụng gì?
-Tạo một thư mục mới đặt tên là ll
-Tạo một tên viết tắt (shortcut) giúp gõ lệnh ll thay thế cho lệnh đầy đủ ls -la
-Xóa toàn bộ lịch sử các lệnh ls đã gõ trước đó
-Thay đổi cấu hình mặc định của hệ thống tập tin
-1
-Khi ổ đĩa bị báo đầy 100% (No space left on device) nhưng lệnh df -h cho thấy dung lượng vẫn còn trống, nguyên nhân lớn nhất là gì?
-Hệ thống bị lỗi RAM vật lý
-Hệ thống đã hết inode trống do chứa quá nhiều file kích thước siêu nhỏ
-Ổ cứng bị lỏng dây cáp kết nối
-Tường lửa chặn quyền ghi của người dùng
-1
 Để theo dõi dung lượng ổ đĩa bị chiếm dụng bởi từng thư mục con cụ thể bên trong thư mục hiện tại, ta dùng lệnh nào?
 df -h
 du -sh *
 free -m
 ls -l
 1
-Lệnh chown root:vboxusers file.txt thực hiện điều gì?
-Đổi chủ sở hữu file thành root và đổi group sở hữu thành vboxusers
-Đổi tên file thành root và tạo bản sao vào thư mục vboxusers
-Cấp quyền đọc cho root và quyền ghi cho vboxusers
-Xóa file.txt khỏi nhóm người dùng vboxusers
-0
 Để thiết lập một biến môi trường có hiệu lực trong toàn bộ các tiến trình con được sinh ra từ shell hiện tại, ta dùng từ khóa nào?
 set
 export
@@ -348,7 +258,7 @@ yield()
 1
 Trong cấu trúc thư mục của Linux, thư mục /var thường chứa loại dữ liệu nào?
 Các file thực thi cốt lõi của hệ thống khi cứu hộ
-Các file dữ liệu có kích thước thay đổi liên tục khi hệ thống chạy như log, mail, database
+Các file dữ liệu có size thay đổi liên tục khi hệ thống chạy như log,mail,database
 Mã nguồn của nhân Linux do người dùng tải về
 Các file cấu hình tĩnh không bao giờ thay đổi
 1
@@ -364,12 +274,6 @@ Chạy lệnh chmod +x script.sh để thêm quyền thực thi cho file
 Chuyển file vào thư mục /root rồi chạy lại
 Xóa file đi và tải lại từ đầu
 0
-Lệnh wget trong giao diện dòng lệnh Linux được sử dụng nhằm mục đích gì?
-Kiểm tra tốc độ đường truyền internet cục bộ
-Tải các file từ internet về máy thông qua các giao thức HTTP, HTTPS, FTP
-Gửi email hàng loạt từ dòng lệnh
-Đóng gói dữ liệu ổ đĩa để truyền sang máy khác
-1
 Lớp nào trong framework Qt cung cấp vòng lặp sự kiện (event loop) cho các ứng dụng có giao diện đồ họa (GUI)?
 QCoreApplication
 QApplication
@@ -387,12 +291,6 @@ P
 M
 T
 K
-1
-Trong Linux, tập tin /dev/null được ví như một "hố đen" vũ trụ vì lý do nào sau đây?
-Nó chứa toàn bộ mã độc bị hệ thống cách ly
-Mọi dữ liệu ghi vào đây đều bị hủy bỏ ngay lập tức, và đọc từ đây luôn trả về kết thúc file (EOF)
-Nó tự động mã hóa mọi dữ liệu được chuyển hướng vào nó
-Nó dùng để tăng tốc độ xử lý đồ họa cho hệ thống
 1
 Lệnh nào sau đây dùng để hiển thị lịch sử các lệnh dòng lệnh mà người dùng hiện tại đã từng gõ trên Terminal?
 history
@@ -412,54 +310,18 @@ GDM
 SDDM
 XDM
 1
-Khi một ứng dụng Qt C++ biên dịch bị lỗi "undefined reference to QMainWindow::QMainWindow()", nguyên nhân phổ biến nhất là gì?
-File .ui bị lỗi cú pháp thiết kế đồ họa
-Chưa thêm module widgets vào file cấu hình dự án (.pro) bằng câu lệnh QT += widgets
-Chưa khai báo thư viện iostream chuẩn của C++
-Tài khoản người dùng không có quyền biên dịch file
-1
 Khi chạy lệnh grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}" log.txt, lệnh này đang thực hiện tìm kiếm đối tượng nào?
 Các chuỗi ký tự chứa ngày tháng năm
 Các địa chỉ IPv4 xuất hiện trong file log.txt
 Các số điện thoại có mười chữ số
 Các mã lỗi hệ thống của nhân Linux
 1
-Phần mềm mã nguồn mở Samba thường được cài đặt trên các máy chủ Linux nhằm mục đích chính là gì?
-Tối ưu hóa hiệu năng tính toán đồ họa cho server
-Chia sẻ file và máy in giữa hệ điều hành Linux và hệ điều hành Windows trong mạng nội bộ
-Quản lý các thùng chứa container Docker ngầm
-Tự động sao lưu dữ liệu hệ thống lên đám mây
-1
-Lệnh find /home -user duy -size +10M thực hiện tác vụ nào sau đây?
-Tìm tất cả các file trong thư mục /home thuộc sở hữu của user "duy" và có kích thước lớn hơn 10MB
-Xóa toàn bộ các file của user duy có dung lượng lớn hơn 10MB
-Chuyển tất cả các file lớn hơn 10MB của user duy sang thư mục khác
-Tính tổng dung lượng các file của user duy trong thư mục /home
-0
 Khi cấu hình tường lửa bằng iptables, bảng (table) nào chịu trách nhiệm chính trong việc lọc gói tin (cho phép hoặc chặn)?
 nat
 mangle
 filter
 raw
 2
-Trong mô hình cấp phát bộ nhớ của một tiến trình Linux, vùng nhớ "Heap" được đặc trưng bởi đặc điểm nào?
-Được cấp phát và giải phóng tự động khi hàm kết thúc
-Được cấp phát động bởi lập trình viên (qua malloc hoặc new) và lớn dần lên phía trên không gian bộ nhớ
-Chứa mã lệnh nhị phân của chương trình khi thực thi
-Chứa các biến toàn cục được khởi tạo sẵn của hệ thống
-1
-Tại Hội nghị Ban Chấp hành Trung ương Đảng lần thứ 8 (tháng 5/1941), sự thay đổi mang tính chiến lược cốt lõi nhất so với Luận cương chính trị (tháng 10/1930) là gì?
-Quyết định thành lập ngay chính phủ công nông binh
-Đặt nhiệm vụ giải phóng dân tộc lên hàng đầu, tạm gác khẩu hiệu cách mạng ruộng đất
-Tập trung lực lượng đánh đổ phong kiến trước để lấy ruộng đất cho dân cày
-Thành lập Liên minh độc lập đồng minh xứ Đông Dương
-1
-Điểm đặc thù mang tính sáng tạo về hình thái khởi nghĩa vũ trang trong Cách mạng tháng Tám năm 1945 ở Việt Nam là gì?
-Đi từ khởi nghĩa từng phần tiến lên tổng khởi nghĩa, kết hợp hài hòa giữa nông thôn và thành thị
-Đánh thẳng vào các đô thị lớn, lấy thành thị bao vây nông thôn
-Sử dụng bạo lực ngoại giao kết hợp với nghi binh quân sự quy mô lớn
-Thực hiện chiến tranh du kích cục bộ lâu dài ở vùng biên giới
-0
 Luận cương chính trị do đồng chí Trần Phú soạn thảo được thông qua tại Hội nghị nào của Đảng?
 Hội nghị thành lập Đảng (2/1930)
 Hội nghị Ban Chấp hành Trung ương Đảng lần thứ nhất (10/1930)
@@ -480,7 +342,7 @@ Hội nghị quân sự cách mạng Bắc Kỳ (4/1945)
 1
 Chỉ thị "Sửa đổi lối làm việc" (1947) của Chủ tịch Hồ Chí Minh tập trung vào việc phê phán và khắc phục những căn bệnh nào trong Đảng?
 Bệnh giáo điều, bệnh lười biếng và bệnh quan liêu
-Chủ nghĩa cá nhân, bệnh ba hoa, bệnh chủ quan và các khuyết tật về phong cách công tác
+Chủ nghĩa cá nhân;bệnh:ba hoa,chủ quan&các khuyết tật về phong cách công tác
 Bệnh hữu khuynh và bệnh tả khuynh trong đấu tranh quân sự
 Hiện tượng tham nhũng và lãng phí vật chất trong chiến khu
 1
@@ -496,24 +358,12 @@ Mặt trận Việt Minh
 Mặt trận Liên Việt
 Mặt trận Dân tộc giải phóng miền Nam Việt Nam
 0
-Nội dung nào sau đây phản ánh đúng tính chất độc đáo của phong trào Xô viết Nghệ - Tĩnh (1930-1931)?
-Đã thành lập được chính quyền nhà nước của giai cấp công nhân trên quy mô cả nước
-Là hình thái nhà nước sơ khai, thực hiện các quyền tự do dân chủ của nhân dân ở một số vùng nông thôn Nghệ - Tĩnh
-Nhận được sự ủng hộ tuyệt đối của chính quyền thực dân Pháp thời bấy giờ
-Lấy đấu tranh ngoại giao làm phương thức hoạt động cốt lõi giành thắng lợi
-1
 Văn kiện nào của Đảng xác định phương châm chiến lược của cuộc kháng chiến chống thực dân Pháp là "Toàn dân, toàn diện, trường kỳ và tự lực cánh sinh"?
 Chỉ thị Toàn dân kháng chiến và tác phẩm "Kháng chiến nhất định thắng lợi"
 Tuyên ngôn độc lập
 Chính cương của Đảng Lao động Việt Nam
 Nghị quyết đại hội Đảng toàn quốc lần thứ II
 0
-Hội nghị Ban Chấp hành Trung ương Đảng lần thứ 15 (tháng 1/1959) đã có quyết định lịch sử quan trọng nào đối với cách mạng miền Nam?
-Quyết định ký kết Hiệp định Giơ-nevơ chấm dứt chiến tranh
-Xác định con đường phát triển của cách mạng miền Nam là khởi nghĩa giành chính quyền bằng bạo lực cách mạng
-Chuyển hoàn toàn lực lượng quân sự thành đấu tranh kinh tế đơn thuần
-Tuyên bố thành lập Mặt trận Tổ quốc Việt Nam
-1
 Đại hội đại biểu toàn quốc lần thứ II của Đảng (tháng 2/1951) đã quyết định đổi tên Đảng thành tên gọi nào?
 Đảng Cộng sản Đông Dương
 Đảng Lao động Việt Nam
@@ -526,39 +376,9 @@ Trung ương Cục miền Nam
 Mặt trận Liên Việt miền Nam
 Bộ Tổng tham mưu quân đội giải phóng
 0
-Một trong những bài học kinh nghiệm cốt lõi nhất về công tác xây dựng Đảng được rút ra xuyên suốt các thời kỳ lịch sử cách mạng là gì?
-Luôn ưu tiên phát triển số lượng đảng viên mới bằng mọi giá
-Giữ vững bản chất giai cấp công nhân của Đảng, lấy chủ nghĩa Mác-Lênin và Tư tưởng Hồ Chí Minh làm nền tảng tư tưởng
-Tập trung toàn bộ quyền lực quyết định vào một cá nhân duy nhất
-Hạn chế mở rộng quan hệ hợp tác quốc tế với các đảng cộng sản khác
-1
-Đầu năm 1930, Nguyễn Ái Quốc đã thống nhất ba tổ chức cộng sản nào ở Việt Nam để thành lập một Đảng duy nhất?
-Đông Dương Cộng sản đảng, An Nam Cộng sản đảng và Đông Dương Cộng sản liên đoàn
-Đảng Tân Việt, Việt Nam Quốc dân đảng và An Nam Cộng sản đảng
-Đông Dương Cộng sản đảng, Việt Nam Độc lập Đồng minh và Hội Việt Nam Cách mạng Thanh niên
-Tân Việt Cách mạng đảng, Đông Dương Cộng sản đảng và Cao vọng đảng
-0
-Đại hội đại biểu toàn quốc lần thứ III của Đảng (tháng 9/1960) đã xác định mục tiêu chung và nhiệm vụ chiến lược của cách mạng hai miền Nam - Bắc như thế nào?
-Miền Bắc thực hiện cách mạng ruộng đất, miền Nam tiến hành nội chiến kinh tế
-Miền Bắc tiến hành cách mạng xã hội chủ nghĩa; Miền Nam giải phóng khỏi ách thống trị của đế quốc Mỹ và tay sai, hoàn thành cách mạng dân tộc dân chủ nhân dân
-Cả hai miền cùng tập trung phát triển công nghiệp nặng và mở cửa giao thương quốc tế
-Tạm dừng mọi hoạt động quân sự để chuẩn bị tổng tuyển cử theo Hiệp định Giơ-nevơ
-1
-Hội nghị Trung ương lần thứ 21 của Đảng (tháng 7/1973) đã nhấn mạnh nhiệm vụ gì của cách mạng miền Nam sau khi Hiệp định Pa-ri được ký kết?
-Chuyển trọng tâm sang hợp tác hòa bình với chính quyền Sài Gòn
-Tiếp tục con đường bạo lực cách mạng, kiên quyết đánh trả những hành động kiên quyết phá hoại hiệp định của địch
-Giải tán toàn bộ quân giải phóng để thực hiện cam kết quốc tế
-Chờ đợi sự can thiệp hoàn toàn của các nước thuộc khối Đồng minh
-1
-Điểm khác biệt căn bản về lực lượng cách mạng được xác định trong Luận cương chính trị (10/1930) so với Cương lĩnh chính trị đầu tiên (2/1930) là gì?
-Luận cương coi trọng tất cả các tầng lớp tư sản và địa chủ yêu nước
-Luận cương không đánh giá đúng khả năng tham gia cách mạng của tầng lớp tiểu tư sản, trí thức, tư sản dân tộc và địa chủ vừa và nhỏ
-Luận cương xác định lực lượng cách mạng chỉ bao gồm giai cấp nông dân
-Luận cương cho rằng chỉ có học sinh, sinh viên mới là lực lượng lãnh đạo cách mạng
-1
 Trong thời kỳ đổi mới, Đảng Cộng sản Việt Nam xác định phát triển kinh tế là nhiệm vụ trung tâm, vậy nhiệm vụ nào được xác định là khâu "then chốt"?
 Phát triển nền văn hóa tiên tiến, đậm đà bản sắc dân tộc
-Xây dựng Đảng trong sạch, vững mạnh cả về chính trị, tư tưởng, đạo đức, tổ chức và cán bộ
+Xây dựng Đảng trong sạch,vững mạnh cả về chính trị,tư tưởng,đạo đức,tổ chức,cán bộ
 Mở rộng tối đa các hoạt động ngoại giao quân sự
 Tập trung xây dựng các khu chế xuất lớn ở vùng biên giới
 1
@@ -568,16 +388,10 @@ Thời kỳ đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước
 Thời kỳ xây dựng kinh tế thị trường tự do hoàn toàn không có sự quản lý của nhà nước
 Thời kỳ tập trung phát triển độc quyền nông nghiệp công nghệ cao
 1
-Đâu là bước đột phá đầu tiên mở đường cho quá trình đổi mới tư duy kinh tế của Đảng, diễn ra từ Hội nghị Trung ương 6 (Khóa IV) năm 1979?
-Cho phép tư nhân nước ngoài sở hữu toàn bộ các nhà máy quốc doanh
-Chủ trương khắc phục những khuyết tật của cơ chế quản lý tập trung quan liêu bao cấp, chấp nhận sản xuất bung ra theo hướng kinh tế thị trường sơ khai
-Quyết định đổi tiền trên quy mô toàn quốc để kiểm soát lạm phát
-Cấm hoàn toàn các hoạt động trao đổi hàng hóa tự do giữa các địa phương
-1
 Chỉ thị "Kháng chiến kiến quốc" của Ban Chấp hành Trung ương Đảng (25/11/1945) đã xác định kẻ thù chính của nhân dân Đông Dương lúc bấy giờ là ai?
-Quân đội Trung Hoa Dân Quốc của Tưởng Giới Thạch
+Quân đội Trung của Tưởng Giới Thạch
 Thực dân Pháp xâm lược
-Phát xít Nhật chưa giải giáp quân đội
+Phát xít Nhật ch giải giáp quân đội
 Quân đội Đế quốc Anh
 1
 Đại hội lần thứ mấy của Đảng đã thông qua bản "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội" (Cương lĩnh năm 1991), định hình các đặc trưng cơ bản của xã hội XHCN ở Việt Nam?
