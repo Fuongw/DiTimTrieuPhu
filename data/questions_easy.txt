@@ -88,23 +88,11 @@ sudo apt update
 sudo apt install
 sudo apt remove
 1
-Khi một file có quyền hạn là -rwxrwxrwx, điều này có nghĩa là gì?
-Chỉ có user sở hữu mới có đầy đủ quyền
-All user trên hệ thống đều quyền Đọc,Ghi,Thực thi
-File này không ai có quyền xóa
-File này đã bị lỗi hệ thống
-1
 Lệnh nào sau đây được sử dụng để xóa một file trong Linux?
 del
 remove
 rm
 erase
-2
-Thư mục /home trong Linux thường được dùng để làm gì?
-Chứa các chương trình thực thi của hệ thống
-Chứa các file cấu hình chung
-Chứa thư mục cá nhân,dữ liệu của các user thường
-Chứa các file tạm thời của hệ thống
 2
 Để xem danh sách các tiến trình (process) đang chạy trong hệ thống theo thời gian thực, lệnh nào thường được dùng?
 ps
